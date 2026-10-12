@@ -1,0 +1,14 @@
+__pycache__/
+.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.swn
+*.sublime-workspace
+*.env
+venv/
+codebook22_llcp-v2-508/
+runs/
+LLCP2023.XPT
+push.sh
