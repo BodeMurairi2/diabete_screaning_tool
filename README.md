@@ -17,9 +17,10 @@ The dataset is downloaded automatically by the notebook and is not stored in thi
 | Value | Meaning |
 |---|---|
 | 1 | Diabetes |
-| 2 | Diabetes only during pregnancy |
 | 3 | No diabetes |
-| 4 | Prediabetes |
+| 4 | At risk: prediabetes, or diabetes only during pregnancy (gestational) |
+
+Respondents with diabetes only during pregnancy (original code 2) are grouped with prediabetes: they do not currently have diabetes, but gestational diabetes is a strong risk factor for type 2 diabetes.
 
 ## Features
 
@@ -32,7 +33,7 @@ The dataset is downloaded automatically by the notebook and is not stored in thi
 ## Project structure
 
 ```
-├── download_dataset.ipynb   # download, cleaning, encoding, training, evaluation
+├── analysis.ipynb           # download, cleaning, encoding, training, evaluation
 ├── data/                    # raw XPT + train/val/test splits (not tracked)
 ├── runs/                    # TensorBoard logs (not tracked)
 └── README.md
@@ -42,10 +43,10 @@ The dataset is downloaded automatically by the notebook and is not stored in thi
 
 ```bash
 pip install numpy pandas matplotlib scikit-learn tensorboard tensorboardX pyarrow
-jupyter notebook download_dataset.ipynb
+jupyter notebook analysis.ipynb
 ```
 
-Run the notebook top to bottom. It will:
+Run the notebook top to bottom, locally or on Kaggle (turn on **Internet** in the Kaggle notebook settings). It will:
 
 1. Download and extract the BRFSS 2023 data into `data/`
 2. Select and rename the features

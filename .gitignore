@@ -12,3 +12,11 @@ codebook22_llcp-v2-508/
 runs/
 LLCP2023.XPT
 push.sh
+data/
+catboost_info/
+*.csv
+*.zip
+*.keras
+*.h5
+*.joblib
+*.pkl
