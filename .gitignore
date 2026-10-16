@@ -1,5 +1,5 @@
 __pycache__/
-.pyc
+*.pyc
 *.pyo
 *.pyd
 *.swp
@@ -20,3 +20,7 @@ catboost_info/
 *.h5
 *.joblib
 *.pkl
+runs_20_features/
+final_model/
+everything_for_download/
+.ipynb_checkpoints/
