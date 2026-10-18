@@ -24,3 +24,6 @@ runs_20_features/
 final_model/
 everything_for_download/
 .ipynb_checkpoints/
+
+# extracted Kaggle run (models, logs, splits) - stored on Google Drive
+model_20_features_run/

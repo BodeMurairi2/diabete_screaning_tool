@@ -1,9 +1,27 @@
-tensorflow
-sckit-learn
-matplotlib
-imblearn
-pandas
-numpy
-urlib
-catboost
-lightboost
+# Python 3.11+ (the notebooks were run on Kaggle)
+# Install with: pip install -r requirements.txt
+
+# Data handling
+numpy>=2.0
+pandas>=2.2
+
+# Plots
+matplotlib>=3.8
+
+# Classical machine learning
+scikit-learn==1.6.1
+imbalanced-learn>=0.13,<0.14
+lightgbm>=4.5
+xgboost>=2.1
+catboost>=1.2
+joblib>=1.4
+
+# Deep learning
+# keras version recorded inside network_64_8_8.keras / .h5
+keras==3.13.2
+tensorflow>=2.20
+tensorboard>=2.20
+tensorboardX>=2.6
+
+# Running the notebooks locally
+jupyter
