@@ -26,15 +26,16 @@ The tool is meant as a **first-stage triage step**: it decides who should go and
 | What | Where |
 |---|---|
 | Code and notebooks | this repository |
-| Raw dataset (`LLCP2023XPT.zip`) | [CDC BRFSS 2023](https://www.cdc.gov/brfss/annual_data/annual_2023.html) (downloaded automatically by the notebook), or the Google Drive folder below |
-| Saved models, TensorBoard logs, train/val/test splits | Google Drive: **<GOOGLE_DRIVE_LINK>** |
+| Raw dataset + codebook (`BRFSS_2023_dataset.zip`) | Google Drive folder (link in the project report), or [CDC BRFSS 2023](https://www.cdc.gov/brfss/annual_data/annual_2023.html) (the final notebook downloads it automatically) |
+| Saved models, TensorBoard logs, train/val/test splits | Google Drive folder (the link is given in the project report) |
 | Result tables and figures | [`image_result/`](image_result/) |
 | Variable definitions | [BRFSS 2023 codebook](https://www.cdc.gov/brfss/annual_data/2023/zip/codebook23_llcp-v2-508.zip) |
 
-The Google Drive folder contains:
+The Google Drive folder (link in the project report) contains:
 
 | File | Content |
 |---|---|
+| `BRFSS_2023_dataset.zip` | raw survey file `data/LLCP2023.XPT` and the BRFSS 2023 codebook |
 | `final_model/random_forest_d12.joblib` | random forest (classical model) |
 | `final_model/network_64_8_8.keras` and `.h5` | Keras network 64-8-8 (deep learning model) |
 | `final_model/network_preprocess.joblib` | the network's imputation, scaling and one-hot encoding |
@@ -114,7 +115,7 @@ pip install -r requirements.txt
 jupyter notebook final_20_features.ipynb
 ```
 
-Then run all cells. The notebook downloads the BRFSS 2023 file into `data/` the first time and skips the download afterwards. If the download fails, download `LLCP2023XPT.zip` from the CDC page or the Drive folder and unzip it into `data/` as `LLCP2023.XPT`.
+Then run all cells. The notebook downloads the BRFSS 2023 file into `data/` the first time and skips the download afterwards. If the download fails, get `BRFSS_2023_dataset.zip` from the Drive folder and unzip it at the root of the repository: it puts the survey file at `data/LLCP2023.XPT`, where the notebooks look for it, and the download is skipped.
 
 > **Memory:** the full survey table needs several GB of RAM. Cross-validation and permutation importance use `n_jobs=2` to avoid running out of memory.
 
